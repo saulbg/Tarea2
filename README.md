@@ -118,7 +118,7 @@ Untracked files// Is to see untracked files (Is not a command) //
 // serve to convert status in an alias .st //
 
 
-#Chapter 3
+# Chapter 3
 
 #### git branch [name] 
 // This creates a new pointer to the same confirmation //
