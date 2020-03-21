@@ -2,14 +2,14 @@
 
 int main(int argc, char *argv[])
 {
-	int numbers[4] = {0};
-	char name[4] = {'a'};
+	int numbers[4] = {0}; //Initializing with 0 //
+	char name[4] = {'a'}; // Initializing with a //
 	// first, print them out raw //
-	printf("numbers: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
+	printf("numbers: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]); //Just printing the numbers //
  	printf("name each: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
 	printf("name: %s\n", name);
  	// setup the numbers //
-	numbers[0] = 1;
+	numbers[0] = 1; // Asigning place to the numbers //
 	numbers[1] = 2;
 	numbers[2] = 3;
 	numbers[3] = 4;
@@ -31,18 +31,23 @@ int main(int argc, char *argv[])
 
 /* Extra Credit
 Assign the characters into numbers and then use printf to print them a character at a time.
-What kind of compiler warnings did you get?
+What kind of compiler warnings did you get? None, i dont get a warning
 
 Do the inverse for name , trying to treat it like an array of int and print it out one int at a time.
 What does Valgrind think of that?
+error: ‘a’ undeclared (first use in this function)
+  char name[a] = {'4'};
 
-How many other ways can you print this out?
+How many other ways can you print this out? With printf, specifing the numer in each string
 
 If an array of characters is 4 bytes long, and an integer is 4 bytes long, then can you treat the whole name
-array like it's just an integer? How might you accomplish this crazy hack?
+array like it's just an integer? How might you accomplish this crazy hack? Putting me to print from x number to
+x number
 
 Take out a piece of paper and draw out each of these arrays as a row of boxes.
 Then do the operations you just did on paper to see if you get them right.
+Check
 
 Convert name to be in the style of another and see if the code keeps working.
+It doesn't run
  */
