@@ -2,14 +2,13 @@
 int main(int argc, char *argv[])
 {
 	// create two arrays we care about //
-	int ages[] = {23, 43, 12, 89, 2};
-	char *names[] = {"Alan", "Frank", "Mary", "John", "Lisa"    
-};
+	int ages[] = {23, 43, 12, 89, 2}; // Creating arrays //
+	char *names[] = {"Alan", "Frank", "Mary", "John", "Lisa"};
 	// safely get the size of ages //
 	int count = sizeof(ages) / sizeof(int);
 	int i = 0;
 	// first way using indexing //
-	for(i = 0; i < count; i++)
+	for(i = 0; i < count; i++) // Starting a loop //
 	{
 		printf("%s has %d years alive.\n", names[i], ages[i]);
 	}
@@ -18,29 +17,27 @@ int main(int argc, char *argv[])
 	int *cur_age = ages;
 	char **cur_name = names;
  	// second way using pointers
-	for(i = 0; i < count; i++)
+	for(i = 0; i < count; i++) // Another loop //
 	{
 		printf("%s is %d years old.\n", *(cur_name+i), *(cur_age+i));
 	}
-	 printf("---\n");
+	printf("---\n");
     	// third way, pointers are just arrays //
-	for(i = 0; i < count; i++) 
+	for(i = 0; i < count; i++)
 	{
 		printf("%s is %d years old again.\n", cur_name[i], cur_age[i]);
 	}
  	printf("---\n");
-    // fourth way with pointers in a stupid complex way    
-	for(cur_name = names, cur_age = ages;
-   	(cur_age - ages) < count;            
-	cur_name++, cur_age++)    
-	{        
-		printf("%s lived %d years so far.\n", *cur_name, *cur_age);    
+	// fourth way with pointers in a stupid complex way //
+	for(cur_name = names, cur_age = ages; (cur_age - ages) < count; cur_name++, cur_age++)
+	{
+		printf("%s lived %d years so far.\n", *cur_name, *cur_age);
 	}
-    	return 0; }
+    	return 0; 
  }
 
 /* Extra Credit
-Rewrite all the array usage in this program so that it's pointers. Rewrite all the pointer usage so they're arrays. 
+Rewrite all the array usage in this program so that it's pointers. Rewrite all the pointer usage so they're arrays.
 
 Go back to some of the other programs that use arrays and try to use pointers instead.
 

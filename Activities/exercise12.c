@@ -3,17 +3,19 @@
 int main(int argc, char *argv[])
 {
 	int i=0; //Declaring a variable //
-	if (argc==1) {
+	if (argc==1)
+	{
 		printf("You only have one argument. You suck. \n ");
-		} else if (argc>1 && argc<4) // Putting a conditional //
+	} else if (argc>1 && argc<4) // Putting a conditional //
 			{
-			printf("Here's your arguments: \n");
-			for(i=0; i<argc; i++) { //Initializing a loop //
-			printf("%s", argv [i]);
-			}
-			printf("\n");
+				printf("Here's your arguments: \n");
+				for(i=0; i<argc; i++)
+				{ //Initializing a loop //
+				printf("%s", argv [i]);
+				}
+				printf("\n");
 			} else {
-				printf("You have too many arguments. You suck. \n");
+					printf("You have too many arguments. You suck. \n");
 				}
 				return 0;
 }
@@ -40,4 +42,7 @@ get into the loop.
 
 Is the first test really saying the right thing? To you the "first argument" isn't the same
 first argument a user entered. Fix it.
+As I said before the argc 0 is the name of the file so, we are not printing the real argument
+that the user put. We just have to put in our code
+argc-1
 */
